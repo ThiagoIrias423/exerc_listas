@@ -3,18 +3,19 @@ c = []
 fahrenheit = []
 
 while True:
-    temp = float(input("Digite uma temperatura em graus celsius 0 para sair: "))
+    temp = input("Digite uma temperatura em graus celsius 0 para sair: ")
 
-    if temp == 0:
+    if temp == 'sair':
         break
-c.append(temp)
+    else:
+        c.append(float(temp))
+       
+print(f'Media celsius = {sum(c) / len(c)}')
 
 for i in c:
-    print(f'Media celsius = {sum(c) / len(c)}')
 
-f = i * 9 / 5 + 32
+    f = i * 9 / 5 + 32
 
-fahrenheit.append(f)
+    fahrenheit.append(f)
 
-for ff in fahrenheit:
-    print(f'Media Fahrenheit = {sum(fahrenheit) / len(fahrenheit)}')
+print(f'Media Fahrenheit = {sum(fahrenheit) / len(fahrenheit)}')
